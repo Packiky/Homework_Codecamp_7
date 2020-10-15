@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>✈Book Flight</title>
+</head>
+
+<body>
+    <form action="/action_page.php">
+        <table>
+            <tr>
+                <th>Flying from</th>
+                <th>To</th>
+            </tr>
+            <tr>
+                <td>
+                    <select name="flying_from" id="flying_from">
+                        <option value="Bangkok">Bangkok</option>
+                        <option value="Phuket">Phuket</option>
+                        <option value="Chiangmai">Chiangmai</option>
+                        <option value="Krabi">Krabi</option>
+                        <option value="Hatyai">Hatyai</option>
+                    </select>
+                </td>
+                <td>
+                    <select name="flying_to" id="flying_to">
+                        <option value="Bangkok">Bangkok</option>
+                        <option value="Phuket">Phuket</option>
+                        <option value="Chiangmai">Chiangmai</option>
+                        <option value="Krabi">Krabi</option>
+                        <option value="Hatyai">Hatyai</option>
+                    </select>
+                </td>
+            </tr>
+        </table>
+        <br>
+        <table>
+            <tr>
+                <th>Departing</th>
+                <th>Returning</th>
+            </tr>
+            <tr>
+                <td>
+                    <input type="date" name="departing" id="departing">
+                </td>
+                <td>
+                    <input type="date" name="returning" id="returning">
+                </td>
+            </tr>
+        </table>
+        <br>
+        <table>
+            <tr>
+                <th>Adult</th>
+                <th>Child</th>
+                <th>Infant</th>
+                <th style="color: orangered;">Currency</th>
+            </tr>
+            <tr>
+                <td>
+                    <input type="number" value="1" min="0" name="adult" id="adult">
+                </td>
+                <td>
+                    <input type="number" value="0" min="0" name="child" id="child">
+                </td>
+                <td>
+                    <input type="number" value="0" min="0" name="infant" id="infant">
+                </td>
+                <td>
+                    <select name="currency" id="currency">
+                        <option value="THB">THB</option>
+                        <option value="EUR">EUR</option>
+                        <option value="USD">USD</option>
+                        <option value="AUD">AUD</option>
+                        <option value="YEN">YEN</option>
+                    </select>
+                </td>
+            </tr>
+        </table>
+        <br>
+        <input type="submit" value="Search">
+    </form>
+</body>
+
+</html>
