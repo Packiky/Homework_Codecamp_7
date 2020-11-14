@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Setup</title>
+
+    <style>
+        .container {
+            border: 2px solid black;
+            width: 550px;
+            height: auto;
+            padding: 5px;
+        }
+
+        th,
+        td {
+            width: 180px;
+            text-align: left;
+            padding-right: 20px;
+        }
+
+        .needed {
+            color: red;
+        }
+
+        .header {
+            background-color: whitesmoke;
+            margin-top: 15px;
+            margin-bottom: 15px;
+            height: 40px;
+            width: 550px;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>slide 10 ให้สร้างตารางตามรูปด้านล่าง</h2>
+    <div class="container">
+        <form>
+            <table>
+                <tr>
+                    <td>Name<span class="needed">*</span> :</td>
+                    <td><input type="text"></td>
+                </tr>
+                <tr>
+                    <td>Tab Text<span class="needed">*</span> :</td>
+                    <td><input type="text"></td>
+                </tr>
+                <tr>
+                    <td>URL<span class="needed">*</span> :</td>
+                    <td>http://www.wizehive.com/webform/</td>
+                    <td><input style="width: 60%" type="text"></td>
+                </tr>
+            </table>
+            <br>
+            <table class="header">
+                <tr>
+                    <th style="color:darkslategray;">FORM SETUP</th>
+                </tr>
+            </table>
+            <table>
+                <tr>
+                    <td>Form :</td>
+                    <td>
+                        <select name="form">
+                            <option value="Contact">Contact</option>
+                            <option value="Feedback">Feedback</option>
+                            <option value="Ticket">Ticket</option>
+                        </select>
+                    </td>
+                    <td><button>Edit</button></td>
+                </tr>
+                <tr>
+                    <td>Logo :</td>
+                    <td>no logo uploaded</td>
+                    <td><button>Upload Logo</button></td>
+                </tr>
+                <tr>
+                    <td>Template Text :</td>
+                    <td>
+                        <select name="template_text">
+                            <option value="English">English</option>
+                            <option value="Dutch">Dutch</option>
+                            <option value="Thai">Thai</option>
+                        </select>
+                    </td>
+                    <td><button>Edit</button></td>
+                </tr>
+                <tr>
+                    <td>Review Form :</td>
+                    <td>
+                        <select name="review_form">
+                            <option value="Default">Default</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Review Score :</td>
+                    <td>
+                        <select name="review_score">
+                            <option value="Rating">Rating</option>
+                        </select>
+                    </td>
+                    <td><button>Reload Fields</button></td>
+                </tr>
+                <tr>
+                    <td>Scoring Type :</td>
+                    <td>
+                        <select name="score_type">
+                            <option value="Average">Average</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Max Score :</td>
+                    <td>4.00</td>
+                </tr>
+            </table>
+        </form>
+        <br>
+    </div>
+</body>
+
+</html>
