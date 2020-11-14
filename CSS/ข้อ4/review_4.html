@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Review CSS Property Value Unit</title>
+
+    <style>
+        table, th, td {
+            width: auto;
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+    </style>
+</head>
+<body>
+    <h2>slide 15 (review CSS)</h2>
+    <table>
+        <tr>
+            <th>Sequence</th>
+            <th>Question</th>
+            <th>Answer</th>
+        </tr>
+        <tr>
+            <td>4.1</td>
+            <td>value ใน display property มีอะไรบ้าง</td>
+            <td>
+                <ul>
+                    <li>inline : Displays an element as an inline element (like span). Any height and width properties will have no effect</li>
+                    <li>block : Displays an element as a block element (like p). It starts on a new line, and takes up the whole width</li>
+                    <li>contents : Makes the container disappear, making the child elements children of the element the next level up in the DOM</li>
+                    <li>flex : Displays an element as a block-level flex container</li>
+                    <li>grid : Displays an element as a block-level grid container</li>
+                    <li>run-in : Displays an element as either block or inline, depending on context</li>
+                </ul>
+            </td>
+        </tr>
+        <tr>
+            <td>4.2</td>
+            <td>grid และ flex แตกต่างกันอย่างไร</td>
+            <td>
+                <p>Flex ใช้เพื่อจัดการ layout 1D ส่วน Grid ใช้เพื่อจัดการ layout 2D.</p>
+                <p>Flex เราสามารถจัดวางของต่างๆภายใน layout 1 แถว อาจจะเป็นแนวตั้งหรือแนวนอน</p>
+                <p>Grid จัดวางตรงไหนก็ได้</p>
+            </td>
+        </tr>
+        <tr>
+            <td>4.3</td>
+            <td>justify and align แตกต่างกันอย่างไร</td>
+            <td>
+                <p>justify คือการจัด content ตาม Main Axis </p>
+                <p>align คือ การจัดcontent ตามแนว Cross Axis และ items ต้องมากกว่า 1 บรรทัดถึงจะทำงาน</p>
+            </td>
+        </tr>
+    </table>
+    <br><hr>
+
+    <h2>silde 16 (review CSS)</h2>
+    <table>
+        <tr>
+            <th>Sequence</th>
+            <th>Question</th>
+            <th>Answer</th>
+        </tr>
+        <tr>
+            <td>5.1</td>
+            <td>position คืออะไร และ อะไรบ้าง</td>
+            <td>
+                <p>position คือ property ที่ใช้ในการกำหนดตำแหน่งของ element</p>
+                <ol>
+                    <li>static : default value</li>
+                    <li>relative :เป็นการกำหนดตำแหน่งนับจาก element ที่อยู่ก่อนหน้าโดยใช้ top left bottom right </li>
+                    <li>absolute : กำหนดตำแหน่งของ element ด้วย top left bottom right (absolute จะไม่สนใจ element ก่อนหน้า และจะพาตัวเองไปยังจุดนั้นเลย)</li>
+                    <li>fixed : ตรึง element นั้นให้อยู่ที่เดิมของหน้าจอตลอดไม่ว่าจะเลื่อนไปไหน</li>
+                    <li>sticky : เป็นการวางตำเเหน่งที่จะยังติดไปเเม้มีการเลื่อนหน้า</li>
+                </ol>
+            </td>
+        </tr>
+        <tr>
+            <td>5.2</td>
+            <td>z-index คืออะไรใช้อย่างไร</td>
+            <td>
+                <p>คือ การจัดการ element ในรูปแบบของ layer</p>
+                <p>ค่าเริ่มต้น z-index = 0</p>
+                <p>ค่าน้อย(ติดลบ) จะอยู่ด้านหลัง, ค่ามาก จะอยู่ด้านหน้า</p>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>
