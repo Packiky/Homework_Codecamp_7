@@ -1,0 +1,65 @@
+* {
+    font-family: prompt, sans-serif;
+}
+
+body {
+    font-family: prompt, sans-serif;
+    color: #636363;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+li {
+    margin-top: 1%;
+}
+
+.form span {
+    color: red;
+}
+
+form .subject {
+    padding-top: 1em;
+    flex: 100%;
+}
+
+form .message {
+    padding-top: 1em;
+    flex: 100%;
+}
+
+input[type=text] {
+    width: 100%;
+    padding: 10px 0px;
+    font-size: 18px;
+    font-weight: 100;
+}
+
+input[type=submit] {
+    background-color: rgb(194, 4, 4);
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    margin-top: 10%;
+    cursor: pointer;
+    float: right;
+    width: 200px;
+    font-size: 200%;
+}
+
+.content {
+    border-radius: 25px;
+    padding-top: 1%;
+    text-align: left;
+    margin-top: 5%;
+    margin-left: 10%;
+    margin-right: 10%; 
+    height: auto;
+    padding-bottom: 10px;
+}
+
+.content p {
+    font-size: 20pt;
+    font-weight: 100;
+    color: black;
+}
