@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation CSS 1(slide 48)</title>
+    <style>
+        .from_to {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            border-radius: 50%;
+            border: 10px greenyellow solid;
+            position: relative;
+            animation: ani_from_to 5s infinite;
+        }
+
+        @keyframes ani_from_to {
+            from {
+                background-color: yellow;
+                width: 300px;
+                height: 300px;
+                border: 20px blue solid;
+                left: 0px;
+            }
+            to {
+                left: 1000px;
+                opacity: 0;
+            }
+        }
+
+        .percent {
+            width: 100px;
+            height: 100px;
+            background-color: purple;
+            border-radius: 50%;
+            border: 10px yellow solid;
+            position: relative;
+            animation: ani_percent 5s infinite;
+        }
+
+        @keyframes ani_percent {
+            0% {
+                background-color:yellow;
+                width: 300px;
+                height: 300px;
+                border: 20px blue solid;
+                left: 1000px;
+            }
+
+            25% {
+                background-color: orangered;
+                width: 250px;
+                height: 250px;
+                border: 15px yellow solid;
+                left: 750px;
+                opacity: 0.5;
+            }
+
+            50% {
+                background-color: darkgreen;
+                width: 200px;
+                height: 200px;
+                border: 10px yellow solid;
+                left: 250px;
+            }
+
+            100% {
+                background-color: purple;
+                width: 150px;
+                height: 150px;
+                border: 5px lightsalmon solid;
+                left: 0px;
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h2>@keyframes แบบ from to</h2>
+    <div class="from_to"></div>
+    <br><br>
+    
+    <h2>@keyframes แบบ %</h2>
+    <div class="percent"></div>
+</body>
+</html>
