@@ -63,3 +63,288 @@ input[type=submit] {
     font-weight: 100;
     color: black;
 }
+
+iframe {
+    width: 80%;
+    margin-left: 10%;
+}
+
+.service {
+    display: grid;
+    margin-left: 10%;
+    grid-gap: 20px;
+}
+
+.sub-service h2 {
+    font-size: 400%;
+    font-weight: 600;
+    color: red;
+}
+
+ul {
+    list-style: none;
+    padding-left: 0%;
+}
+
+@media only screen and (max-width: 560px){
+    .form {
+        font-weight: 300;
+        background-color: white;
+        padding: 30px;
+        border: 0.2px lightgrey solid;
+        border-radius: 20px;
+        margin-top: 10%;
+        margin-left: 5%;
+        margin-right: 5%;
+        box-shadow: 0px 0px 1px 1px lightgrey;
+    }
+
+    .form h2 {
+        font-size: 250%;
+        font-weight: bold;
+        text-align: center;       
+    }
+
+    .form ul {
+        display: grid;
+        grid-template-columns: auto;
+        justify-items: center;
+    }
+
+    .form .name {
+        width: 95%;
+    }
+
+    .form .email {
+        width: 95%;
+    }
+
+    .form .subject {
+        width: 95%;
+    }
+
+    .name > input[type=text]{
+        border: 0.5px lightgrey solid;
+        border-radius: 5px;
+    }
+
+    .email > input[type=text]{
+        border: 0.5px lightgrey solid;
+        border-radius: 5px;
+    }
+
+    .subject > input[type=text]{
+        border: 0.5px lightgrey solid;
+        border-radius: 5px;
+    }
+
+    .message > input[type=text]{
+        height: 100px;
+        border: 0.5px lightgrey solid;
+        border-radius: 5px;
+    }
+
+    .submit > input[type=Submit] {
+        border-radius: 10px;
+        background-color: red;
+        font-weight: 600;
+    }
+
+    iframe {
+        height: 200px;
+    }
+
+    .service {
+        display: grid;
+        grid-template-columns: auto;
+    }
+
+}
+
+@media only screen and (min-width: 561px) and (max-width: 800px) {
+    .form {
+        font-weight: 300;
+        background-color: white;
+        padding: 30px;
+        border: 0.2px lightgrey solid;
+        border-radius: 20px;
+        margin-top: 10%;
+        margin-left: 5%;
+        margin-right: 5%;
+        box-shadow: 0px 0px 1px 1px lightgrey;
+    }
+
+    .form h2 {
+        font-size: 400%;
+        font-weight: bold;
+        text-align: center;       
+    }
+
+    .form ul {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+        grid-template-areas: 
+        "a b"
+        "c c"
+        "d d"
+        "e e";
+        padding-left: 5%;
+        padding-right: 5%;
+        justify-items: center;
+    }
+
+    .form .name {
+        grid-area: a;
+        width: 90%;
+    }
+
+    .form .email {
+        grid-area: b;
+        width: 90%;
+    }
+
+    .form .subject {
+        grid-area: c;
+        width: 95%;
+    }
+
+    .form .message {
+        grid-area: d;
+        width: 95%;
+    }
+
+    .form .submit {
+        grid-area: e;
+    }
+
+    .name > input[type=text]{
+        border: 0.5px lightgrey solid;
+        border-radius: 5px;
+    }
+
+    .email > input[type=text]{
+        border: 0.5px lightgrey solid;
+        border-radius: 5px;
+    }
+
+    .subject > input[type=text]{
+        border: 0.5px lightgrey solid;
+        border-radius: 5px;
+    }
+
+    .message > input[type=text]{
+        height: 100px;
+        border: 0.5px lightgrey solid;
+        border-radius: 5px;
+    }
+
+    .submit > input[type=Submit] {
+        border-radius: 10px;
+        background-color: red;
+        font-weight: 600;
+    }
+
+    iframe {
+        height: 420px;
+    }
+
+    .service {
+        display: grid;
+        grid-template-columns: repeat(2, auto);
+    }
+}
+
+@media only screen and (min-width: 801px) {
+    .form {
+        font-weight: 300;
+        background-color: white;
+        padding: 30px;
+        border: 0.2px lightgrey solid;
+        border-radius: 20px;
+        margin-top: 10%;
+        margin-left: 5%;
+        margin-right: 5%;
+        box-shadow: 0px 0px 1px 1px lightgrey;
+    }
+
+    .form h2 {
+        font-size: 400%;
+        font-weight: bold;
+        text-align: center;       
+    }
+
+    .form ul {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+        grid-template-areas: 
+        "a b"
+        "c c"
+        "d d"
+        "e e";
+        padding-left: 5%;
+        padding-right: 5%;
+        justify-items: center;
+    }
+
+    .form .name {
+        grid-area: a;
+        width: 90%;
+    }
+
+    .form .email {
+        grid-area: b;
+        width: 90%;
+    }
+
+    .form .subject {
+        grid-area: c;
+        width: 95%;
+    }
+
+    .form .message {
+        grid-area: d;
+        width: 95%;
+    }
+
+    .form .submit {
+        grid-area: e;
+    }
+
+    .name > input[type=text]{
+        border: 0.5px lightgrey solid;
+        border-radius: 5px;
+    }
+
+    .email > input[type=text]{
+        border: 0.5px lightgrey solid;
+        border-radius: 5px;
+    }
+
+    .subject > input[type=text]{
+        border: 0.5px lightgrey solid;
+        border-radius: 5px;
+    }
+
+    .message > input[type=text]{
+        height: 100px;
+        border: 0.5px lightgrey solid;
+        border-radius: 5px;
+    }
+
+    .submit > input[type=Submit] {
+        border-radius: 10px;
+        background-color: red;
+        font-weight: 600;
+    }
+
+    iframe {
+        height: 420px;
+    }
+
+    .service {
+        display: grid;
+        grid-template-columns: repeat(2, auto);
+    }
+}
