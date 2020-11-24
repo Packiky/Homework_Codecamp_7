@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation CSS 2(slide 52)</title>
+    <style>
+        .di_normal {
+            width: 100px;
+            height: 100px;
+            background-color: purple;
+            border-radius: 50%;
+            border: 10px yellow solid;
+            position: relative;
+            /* animation: ani_percent 5s infinite; */
+            animation-name: ani_normal;
+            animation-duration: 7s;
+            animation-delay: 2s;
+            animation-iteration-count: 5;
+            /* animation-direction: reverse; */
+        }
+
+        @keyframes ani_normal {
+            20% {
+                background-color:yellow;
+                border: 20px blue solid;
+                left: 1000px;
+            }
+
+            40% {
+                background-color: orangered;
+                border: 15px yellow solid;
+                left: 750px;
+                opacity: 0.75;
+            }
+
+            60% {
+                background-color: darkgreen;
+                border: 10px yellow solid;
+                left: 500px;
+            }
+
+            80% {
+                background-color: turquoise;
+                border: 5px indianred solid;
+                left: 250px;
+                opacity: 0.5;
+            }
+
+            100% {
+                background-color: purple;
+                border: 2px lightsalmon solid;
+                left: 0px;
+            }
+        }
+
+        .di_reverse {
+            width: 100px;
+            height: 100px;
+            background-color: purple;
+            border-radius: 50%;
+            border: 10px yellow solid;
+            position: relative;
+            /* animation: ani_percent 5s infinite; */
+            animation-name: ani_reverse;
+            animation-duration: 7s;
+            animation-delay: 2s;
+            animation-iteration-count: 5;
+            animation-direction: reverse;
+        }
+
+        @keyframes ani_reverse {
+            20% {
+                background-color:yellow;
+                border: 20px blue solid;
+                left: 1000px;
+            }
+
+            40% {
+                background-color: orangered;
+                border: 15px yellow solid;
+                left: 750px;
+                opacity: 0.75;
+            }
+
+            60% {
+                background-color: darkgreen;
+                border: 10px yellow solid;
+                left: 500px;
+            }
+
+            80% {
+                background-color: turquoise;
+                border: 5px indianred solid;
+                left: 250px;
+                opacity: 0.5;
+            }
+
+            100% {
+                background-color: purple;
+                border: 2px lightsalmon solid;
+                left: 0px;
+            }
+        }
+
+        .di_alternate {
+            width: 100px;
+            height: 100px;
+            background-color: purple;
+            border-radius: 50%;
+            border: 10px yellow solid;
+            position: relative;
+            /* animation: ani_percent 5s infinite; */
+            animation-name: ani_alternate;
+            animation-duration: 7s;
+            animation-delay: 2s;
+            animation-iteration-count: 5;
+            animation-direction: alternate;
+        }
+
+        @keyframes ani_alternate {
+            20% {
+                background-color:yellow;
+                border: 20px blue solid;
+                left: 1000px;
+            }
+
+            40% {
+                background-color: orangered;
+                border: 15px yellow solid;
+                left: 750px;
+                opacity: 0.75;
+            }
+
+            60% {
+                background-color: darkgreen;
+                border: 10px yellow solid;
+                left: 500px;
+            }
+
+            80% {
+                background-color: turquoise;
+                border: 5px indianred solid;
+                left: 250px;
+                opacity: 0.5;
+            }
+
+            100% {
+                background-color: purple;
+                border: 2px lightsalmon solid;
+                left: 0px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h2>Normal</h2>
+    <div class="di_normal"></div>
+    <br>
+    
+    <h2>Reverse</h2>
+    <div class="di_reverse"></div>
+    <br>
+
+    <h2>Alternate</h2>
+    <div class="di_alternate"></div>
+</body>
+</html>
