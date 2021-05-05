@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let numbers = [];
+        let sum = 0;
+        let value = prompt("Enter Value:");
+
+        while (value != "stop") {
+            numbers.push(+value);
+            value = prompt("Enter Value:");
+        }
+
+        for (let number of numbers) {
+            sum += number;
+        }
+
+        let avg = sum / numbers.length;
+
+        console.log("Original Array: " + numbers);
+        console.log(`Average is ${avg}`);
+
+    </script>
+</body>
+
+</html>

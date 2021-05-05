@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function evenArraySum(array) {
+            let total = 0;
+
+            for (let number of array) {
+                total = (Number(number) % 2 == 0) ? total + Number(number) : total;
+            }
+
+            return total;
+        }
+
+        let numbers = prompt("Enter your numbers", "10,40,2,9,5").split(",");
+        console.log(evenArraySum(numbers));
+
+        // input: [1, 3, 5, 9]
+        // output: 0
+        // ---------------------------------------
+        // input: [5, 8, 6, 7, 1]
+        // output: 14
+        // ---------------------------------------
+
+
+
+    </script>
+</body>
+
+</html>

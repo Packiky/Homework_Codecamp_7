@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function thaiTypeof(variable) {
+            let text;
+
+            switch (typeof variable) {
+                case "boolean":
+                    text = "โลจิก";
+                    break;
+                case "number":
+                    text = "ตัวเลข";
+                    break;
+                case "string":
+                    text = "ข้อความ";
+                    break;
+                case "symbol":
+                    text = "สัญลักษณ์";
+                    break;
+                case "object":
+                    text = "ออปเจ็คต์";
+                    break;
+                default:
+                    text = "ตัวแปรไม่กำหนดค่า";
+            }
+
+            return text;
+        }
+
+        // input: thaiTypeof(“Hello”)
+        // output: “ข้อความ”
+        // ------------------------------------
+        //     input: thaiTypeof(2)
+        // output: “ตัวเลข”
+        // ------------------------------------
+        //     input: thaiTypeof({ name: “Hello” })
+        // output: “ออปเจ็คต์”
+
+
+    </script>
+</body>
+
+</html>

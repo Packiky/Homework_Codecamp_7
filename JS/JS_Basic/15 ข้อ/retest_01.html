@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let a = Number(prompt("Enter The First Number Value:"));
+        let b = Number(prompt("Enter The Second Number Value:"));
+
+        if (a % b === 0) {
+            a = a / b;
+            b = b / b;
+        } else {
+            for (let i = 1; i < b; i++) {
+                if (a % i === 0 && b % i === 0) {
+                    a = a / i;
+                    b = b / i;
+                }
+            }
+        }
+
+        alert(`${a}/${b}`);
+
+        // INPUT
+        // a = 5
+        // b = 7
+        // OUTPUT
+        // 5 / 7
+        // ----------------------------------
+        //     INPUT
+        // a = 10
+        // b = 5
+        // OUTPUT
+        // 2 / 1
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let numbers = [];
+        let value = prompt("Enter Value:");
+
+        while (value != "stop") {
+            numbers.push(+value);
+            value = prompt("Enter Value:");
+        }
+
+        let min = Math.min.apply(Math, numbers);
+        let max = Math.max.apply(Math, numbers);
+
+        console.log("Original Array: " + numbers);
+        console.log(`The minimum value is ${min} and The maximum value is ${max}`);
+
+    </script>
+</body>
+
+</html>

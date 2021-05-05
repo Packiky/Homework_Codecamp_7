@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let numbers = [];
+        let value = prompt("Enter Value:");
+
+        while (value != "stop") {
+            numbers.push(+value);
+            value = prompt("Enter Value:");
+        }
+
+        let min = Math.min.apply(Math, numbers);
+        let diff = Math.max.apply(Math, numbers) - Math.min.apply(Math, numbers);
+
+        console.log("Original Array: " + numbers);
+        console.log(`Difference of Min and Max value is ${diff}`);
+
+    </script>
+</body>
+
+</html>

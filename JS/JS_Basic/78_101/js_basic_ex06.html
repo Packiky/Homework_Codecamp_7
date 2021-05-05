@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function draw(n) {
+            let number = "";
+            let count = 1;
+            for (let row = 1; row <= n; row++) {
+                for (let column = 1; column <= n; column++) {
+                    number = number + count;
+                    count += 1;
+                }
+                number = number + "\n";
+            }
+            console.log(number);
+        }
+
+        //draw(3) 
+        //123
+        //456
+        //789
+
+    </script>
+</body>
+
+</html>

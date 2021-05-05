@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        let numbers = [];
+        let value = prompt("Enter Value:");
+
+        while (value != "stop") {
+            numbers.push(+value);
+            value = prompt("Enter Value:");
+        }
+
+        const gcd = (a, b) => a ? gcd(b % a, a) : b;
+        const lcm = (a, b) => a * b / gcd(a, b);
+
+        numbers.reduce(lcm);
+
+        // Input: [24, 48, 96]
+        // Output: 96
+
+        // Input: [2, 3, 5, 7]
+        // Output: 210
+
+
+    </script>
+</body>
+
+</html>

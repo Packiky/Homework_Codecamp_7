@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function draw(n) {
+            let str = "";
+            for (let row = 1; row <= n; row++) {
+                for (let column = 1; column <= n; column++) {
+                    str = (row === column) ? str + "_" : str + "*";
+
+                    // if (row === column) {
+                    //     str = str + "_";
+                    // } else {
+                    //     str = str + "*";
+                    // }
+                }
+                str = str + "\n";
+            }
+            console.log(str);
+        }
+        //draw(2)
+        //_*
+        //*_
+
+        //draw(3) 
+        //_**
+        //*_*
+        //**_
+
+        //draw(4) 
+        //_***
+        //*_**
+        //**_*
+        //***_
+    </script>
+</body>
+
+</html>

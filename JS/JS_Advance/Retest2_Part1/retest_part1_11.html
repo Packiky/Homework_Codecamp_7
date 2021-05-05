@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function minToMax(array) {
+            let temp = [];
+
+            for (let i = 0; i < array.length; i++) {
+                for (let j = 0; j < array.length; j++) {
+                    if (array[j] > array[i]) {
+                        temp = array[j];
+                        array[j] =array[i];
+                        array[i] = temp;
+                    }
+                }
+            }
+
+            return array;
+        }
+
+        function maxToMin(array) {
+            let temp = [];
+
+            for (let i = 0; i < array.length; i++) {
+                for (let j = 0; j < array.length; j++) {
+                    if (array[j] < array[i]) {
+                        temp = array[j];
+                        array[j] =array[i];
+                        array[i] = temp;
+                    }
+                }
+            }
+
+            return array;
+        }
+
+        let arr = prompt("Enter your numbers", "10,40,2,9,5").split(",");
+        let sort_asc = +prompt("Sorting all numbers from smallest to largest ?", "1 = yes, 0 = no");
+        let numbers = Array.from(arr, x => Number(x));
+
+        if  (Boolean(sort_asc)) {
+            console.log(minToMax(numbers));
+        } else {
+            console.log(maxToMin(numbers));
+        }
+
+    </script>
+</body>
+
+</html>

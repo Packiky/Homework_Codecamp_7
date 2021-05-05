@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let numbers = [];
+        let value = prompt("Enter Value:");
+
+        while (value != "stop") {
+            numbers.push(+value);
+            value = prompt("Enter Value:");
+        }
+
+        console.log("Original Array: " + numbers)
+
+        // sort the numbers array
+        numbers.sort( (a, b) => a - b );
+        console.log("Sorted Array: " + numbers)
+
+        console.log(`The First three minimum values is ${numbers[0]}, ${numbers[1]}, ${numbers[2]}`);
+
+
+    </script>
+</body>
+
+</html>

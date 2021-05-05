@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function changeStringtoThaiDate(date) {
+            let monthList = ["มกราคม", "กุมภาพันธ์", "มีนาคม", "เมษายน", "พฤษภาคม", "มิถุนายน", "กรกฎาคม", "สิงหาคม", "กันยายน", "ตุลาคม", "พฤศจิกายน", "ธันวาคม"];
+            let day = Number(date[0]);
+            let month = Number(date[1]);
+            let year = Number(date[2]) + 543;
+            let text = "";
+
+            if ((day <= 30 && (month == 2 || month == 4 || month == 6 || month == 9 || month == 11)) ||
+                (day <= 31 && (month == 1 || month == 3 || month == 5 || month == 7 || month == 8 || month == 10 || month == 12))) {
+                text = `วันที่ ${day} เดือน${monthList[date[1] - 1]} พ.ศ. ${year}`;
+            } else {
+                text = "Error";
+            }
+
+            return text;
+        }
+
+        let strDate = prompt("Enter your date", "dd-mm-yyyy").split("-");
+        console.log(changeStringtoThaiDate(strDate));
+
+        // input: “12 - 11 - 1996”
+        // output: “วันที่ 12 เดือนพฤศจิกายน พ.ศ. 2539”
+        // ---------------------------------
+        // input: “31 - 11 - 2000”
+        // output: “Error”
+        // --------------------------------
+        // input: “12 - 13 - 1996”
+        // output: “Error”
+        // --------------------------------
+        // input: “02 - 01 - 1992”
+        // output: “วันที่ 2 เดือนมกราคม พ.ศ. 2535”
+        // --------------------------------
+
+
+    </script>
+</body>
+
+</html>

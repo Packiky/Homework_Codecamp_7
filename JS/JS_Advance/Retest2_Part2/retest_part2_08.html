@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function toChange(money) {
+            const thb_array = [1000, 500, 100, 50, 20, 10, 5, 2, 1];
+            let toChange = [];
+            let toReturn = [];
+            let count = 0;
+
+            // loop through as long as the amount is bigger than 0
+            while (money > 0) {
+
+                // loop through the thb array
+                for (let thb of thb_array) {
+
+                    // if the current th bath from the thb array is smaller or as large as the money
+                    if (thb <= money) {
+                        money = money - thb // subtract thb from money
+                        toChange.push(thb); // push change money to the array
+                        break;
+                    }
+                }
+            }
+
+            // loop through the thb array again to count each banks and coins
+            for (let thb of thb_array) {
+                toReturn.push(toChange.filter(x => x == thb).length); // push the number of change money to the array
+            }
+            return toReturn;
+        }
+
+        let toReturn = toChange( +prompt("Enter Money: ", 788) );
+        console.log(`แบงค์พัน ${toReturn[0]} ใบ / แบงค์ห้าร้อย ${toReturn[1]} ใบ / แบงค์ร้อย ${toReturn[2]} ใบ / แบงค์ห้าสิบ ${toReturn[3]} ใบ / แบงค์ยี่สิบ ${toReturn[4]} ใบ / เหรียญสิบ ${toReturn[5]} เหรียญ / เหรียญห้า ${toReturn[6]} เหรียญ / เหรียญสองบาท ${toReturn[7]} เหรียญ / เหรียญบาท ${toReturn[8]} เหรียญ`);
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let inputN = +prompt("Enter Fibonacci Sequence Number:");
+        let n1 = 0;
+        let n2 = 1;
+        let nn = null;
+
+        for (let i = 2; i < inputN; i++) {
+            // {\displaystyle F_{n}=F_{n-1}+F_{n-2}\!}
+            nn = n1 + n2;
+            n1 = n2;
+            n2 = nn;
+        }
+
+        alert(nn);
+
+        // Fibonacci
+        // 0, 1, 1, 2, 3, 5, 8, 13, …
+        // (ผลลัพธ์เกิดจากการบวกกันของสองตัวก่อนหน้า)
+
+        // INPUT
+        // n = 7
+        // OUTPUT
+        // 8
+        // -------------------
+        //     INPUT
+        // n = 3
+        // OUTPUT
+        // 1
+
+    </script>
+</body>
+
+</html>

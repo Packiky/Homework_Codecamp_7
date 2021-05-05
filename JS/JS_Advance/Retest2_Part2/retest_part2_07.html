@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function numberOfSquare(height, width) {
+            let area = height * width;
+            let min = (height < width) ? height : width;
+            let square = min * min;
+            let count = 0;
+
+            if (area % square == 0) {
+                return area / square;
+            } else {
+                while (area != 0) {
+                    area = area - square;
+                    count++
+                }
+                return count;
+            }
+        }
+
+        console.log(numberOfSquare(1, 5));
+
+    </script>
+</body>
+
+</html>

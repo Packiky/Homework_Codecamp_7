@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let numbers = prompt("Enter your numbers", "10,40,2,9,5").split(",");
+        let sort_asc = +prompt("Sorting all numbers from smallest to largest ?", "1 = yes, 0 = no");
+
+        numbers = Boolean(sort_asc) ? numbers.sort( (a, b) => a - b ) : numbers.sort( (a, b) => b - a );
+
+        console.log(numbers);
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let total = 0;
+
+        for (let i = 1; i <= 155; i += 2) {
+            total += i * (i + 2) * (i + 4);
+        }
+
+        alert(total);
+
+        // 1x3x5 + 3x5x7 + 5x7x9 + … + 155x157x159
+        // 15 + 105 + 315
+
+    </script>
+</body>
+
+</html>

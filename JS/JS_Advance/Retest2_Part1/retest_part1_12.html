@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let total = 0;
+        let temp = 0;
+        let count = 1;
+
+        while (temp < 1000) {
+            let m_3 = 3;
+            let m_5 = 5;
+
+            temp = ((m_3 * count) == (m_5 * count)) ? temp + (m_3 * count) : temp + (m_3 * count) + (m_5 * count); 
+            total = (temp >= 1000) ? total : temp;
+            count++;
+        }
+
+        console.log(total);
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function checkCharacter(string) {
+            if (string == string.toUpperCase()) return "All character are capital.";
+            else if (string == string.toLowerCase()) return "All character are small.";
+            else return "All character are mix.";
+        }
+
+        let str = prompt("Enter value: ", "Hello");
+
+        console.log(checkCharacter(str));
+        
+    </script>
+</body>
+</html>

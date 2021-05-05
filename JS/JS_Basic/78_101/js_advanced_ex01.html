@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function pow(x, n) {
+            let result = 1;
+            for (let i = 0; i < n; i++) {
+                result *= x;
+            }
+            return result;
+        }
+
+        let x = prompt("x?", '');
+        let n = prompt("n?", '');
+
+        if (n <= 0) {
+            alert(`Power ${n} is not supported, please enter an integer number greater than zero`);
+            return;
+        }
+
+        alert(pow(x, n));
+
+        //////////////////////////////////////////
+
+        // Object part 1-1
+        let human = {
+            name: "Pack",
+            age: 28,
+            home: "Vista Park",
+            isSingle: true,
+            Clever: 9
+        };
+
+
+        // Object part 1-2
+        let obj = {};
+        let key = prompt("Enter Key: ");
+
+        while (key !== "stop") {
+            let value = prompt("Enter Value: ");
+
+            obj[key] = value;
+            key = prompt("Enter Key: ");
+        }
+
+        console.log(obj);
+
+
+        // Object part 1-3
+        let obj = {};
+        let key = prompt("Enter fruit's name: ");
+
+        while (key !== "stop") {
+            let value = prompt(`Enter the number of ${key}: `);
+
+            if (Number(value) > 1) key = key + "s";
+            obj[key] = value;
+            key = prompt("Enter fruit's name: ");
+        }
+
+        console.log(obj);
+
+
+        // Object part 3-1
+        let obj = {};
+        obj.name = "Sonter";
+        obj.surname = "Pakorn";
+
+        obj.name = "Boy";
+
+        delete obj.name;
+
+
+        // Object part 3-2
+        function isEmpty(obj) {
+            for (let key in obj) {
+                return false;
+            }
+            return true;
+        }
+
+
+        // Object part 3-4
+        let salaries = {
+            John: 100,
+            Ann: 160,
+            Pete: 130
+        }
+
+        function sum(obj) {
+            let totalSalary = 0;
+
+            for (let key in obj) {
+                totalSalary = totalSalary + obj[key];
+            }
+            return totalSalary;
+        }
+
+
+
+        // Object part 3-5
+        // before the call
+        let menu = {
+            width: 200,
+            height: 300,
+            title: "My menu"
+        };
+
+        function multiplyNumeric(obj, times) {
+            for (let key in obj) {
+                if (typeof obj[key] !== "number") continue;
+                obj[key] *= times;
+
+            }
+        }
+
+        // function multiplyNumeric(obj, times) {
+        //     for (let key in obj) {
+        //         if (typeof obj[key] === "number") {
+        //             obj[key] = obj[key] * times;
+        //         }
+        //     }
+        // }
+
+        multiplyNumeric(menu, 2);
+
+        // after the call
+        menu = {
+            width: 400,
+            height: 600,
+            title: "My menu"
+        };
+
+        // Object part 6-6 -- Calculator
+        let calculator = {
+            read() {
+                this.number1 = Number(prompt("Enter First Number:"));
+                this.number2 = Number(prompt("Enter Second Number:"));
+            },
+            sum() {
+                return this.number1 + this.number2;
+            },
+            mul() {
+                return this.number1 * this.number2;
+            }
+        };
+
+
+        calculator.read();
+        alert(calculator.sum());
+        alert(calculator.mul());
+
+
+        // Object part 6-7 -- Ladder
+        let ladder = {
+            step: 0,
+            up() {
+                this.step++;
+                return this;
+            },
+            down() {
+                this.step--;
+                return this;
+            },
+            showStep: function () { // shows the current step
+                alert(this.step);
+                return this;
+            }
+        };
+
+
+        // Object part 7-4 -- Calculator - Constructor and New
+        function User(name) {
+            this.name = name;
+
+            this.sayHi = function () {
+                alert("My name is: " + this.name);
+            };
+        }
+
+        let john = new User("John");
+
+        john.sayHi(); // My name is: John
+
+        /*
+        john = {
+           name: "John",
+           sayHi: function() { ... }
+        }
+        */
+
+        function Calculator() {
+            this.read = function () {
+                this.number1 = Number(prompt("Enter First Number:"));
+                this.number2 = Number(prompt("Enter Second Number:"));
+            };
+            this.sum = function () {
+                return this.number1 + this.number2;
+            };
+            this.mul = function () {
+                return this.number1 * this.number2;
+            };
+        }
+
+        let calculator = new Calculator();
+
+        calculator.read();
+        alert(calculator.sum());
+        alert(calculator.mul());
+
+
+        // Object part 7-4 -- Accumulator - Constructor and New
+        function Accumulator(startingValue) {
+            this.value = Number(startingValue);
+            this.read = function () {
+                let temp = Number(prompt("Enter Number:"));
+                this.value += temp;
+                console.log(this.value);
+            }
+        }
+
+
+        // Number 7 Random
+        // function random(min, max) {
+        //     return (Math.random() * (max - min)) + min;
+
+        // }
+
+        // alert(random(1, 5)); // 1.2345623452
+        // alert(random(1, 5)); // 3.7894332423
+        // alert(random(1, 5)); // 4.3435234525
+
+        let random = (min, max) => (Math.random() * (max - min)) + min;
+
+        for (let i = 1; i < 10; i++) {
+            console.log(random(1, 5));
+        }
+
+
+        // String - Index of
+        let i = 0;
+        let n = 0;
+        let ss = prompt("Text to Search:");
+
+        while (true) {
+            i = str.indexOf(ss, i);
+            if (i < 0) break;
+            console.log(i);
+            i++;
+            n++;
+        }
+
+        (i < 0 && n < 1) ? console.log("Not Found!!") : console.log("Amount: " + n);
+
+        // String - ex01
+        function ucFirst(str) {
+            return str = str.replace(str[0], str[0].toUpperCase());
+        }
+
+        // String - ex02
+        function checkSpam(str) {
+            let count_xxx = 0;
+            let count_viagra = 0;
+
+            count_xxx = count_xxx = str.indexOf("xxx", count_xxx);
+            count_viagra = count_viagra = str.indexOf("viagra", count_viagra);
+
+            (count_xxx < 0 && count_viagra < 0) ? console.log("False") : console.log("True");
+        }
+
+
+        // String - ex03
+        function truncate(string, maxLength) {
+            if (string.length > maxLength) {
+                let temp = string.substr(0, maxLength - 1);
+                return temp = temp + "...";
+            }
+            return string;
+        }
+
+        //truncate("What I'd like to tell on this topic is:", 20) = "What I'd like to te…"
+        //truncate("Hi everyone!", 20) = "Hi everyone!"
+
+
+        // String - ex03
+        let extractCurrencyValue = (string, rate) => Number(string.substr(1, string.length)) * rate;
+
+        // function extractCurrencyValue(string, rate) {
+        //     return Number(string.substr(1, string.length)) * rate; 
+        // }
+
+        // alert(extractCurrencyValue('$120', 30.5) === 3660); // true
+
+
+        // Array - method 11 - ex10.4
+        // 1.1
+        const array1 = [1, 2, 30, 400];
+        const array2 = array1.map(item => item * 2);
+
+        console.log(array2);
+        // expected output: array2[2, 4, 60, 800]
+
+        // 1.2
+        const array1 = [1, 2, 3, 4];
+        const array2 = array1.map(item => String(item));
+
+        console.log(array2);
+        // expected output: array2 ["1", "2", "3", "4"]
+
+        // 1.3
+        const array1 = [1, "1", 2, {}];
+        const array2 = array1.map(item => typeof (item));
+
+        console.log(array2);
+        // expected output: array2 ["number", "string", "number", "object"]
+
+        // 1.4
+        const array1 = ["apple", "banana", "orange"];
+        const array2 = array1.map(item => item.toUpperCase());
+
+        console.log(array2);
+        // expected output: array2 ["APPLE", "BANANA", "ORANGE"]
+
+        // 1.5
+        const array1 = [
+            { name: "apple", age: 14 },
+            { name: "banana", age: 18 },
+            { name: "watermelon", age: 32 },
+        ];
+
+        const array2 = array1.map(item => item.name);
+
+        console.log(array2);
+        // expected output: array2 ["apple", "banana", "watermelon"]
+
+        // 1.6
+        const array1 = [
+            { name: "apple", age: 14 },
+            { name: "banana", age: 18 },
+            { name: "watermelon", age: 32 },
+        ];
+
+        const array2 = array1.map(item => item.age);
+
+        console.log(array2);
+        // expected output: array2 [14, 18, 32]
+
+        // 1.7
+        const array1 = [
+            { name: "apple", surname: "London" },
+            { name: "banana", surname: "Bangkok" },
+            { name: "watermelon", surname: "Singapore" },
+        ];
+
+        const array2 = array1.map(item => item.name + " " + item.surname);
+
+        console.log(array2);
+        // expected output: array2 ["apple London", "banana Bangkok", "watermelon Singapore"]
+
+        // 1.8
+        const array1 = [1, 3, 4, 5, 6, 7, 8];
+        const array2 = array1.map(item => (item % 2 === 0) ? "even" : "odd");
+
+        console.log(array2);
+        // expected output: array2 ["odd", "odd", "even", "odd", "even", "odd", "even"]
+
+        // 1.9
+        const array1 = [1, -3, 2, 8, -4, 5];
+        const array2 = array1.map(item => Math.abs(item));
+
+        console.log(array2);
+        // expected output: array2 [1, 3, 2, 8, 4, 5]
+
+        // 1.10
+        const array1 = [100, 200.25, 300.84, 400.3];
+        const array2 = array1.map(item => String(item.toFixed(2)));
+
+        console.log(array2);
+        // expected output: array2 ["100.00", "200.25", "300.84", "400.30"]
+
+        // 1.11
+        let today = new Date();
+        // let dd = String(today.getDate()).padStart(2, '0');
+        // let mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
+        let yyyy = today.getFullYear();
+
+        //today = yyyy + '-' + mm + '-' + dd;
+        //document.write(today);
+
+        const array1 = [
+            { name: "apple", birth: "2000-01-01" },
+            { name: "banana", birth: "1990-10-01" },
+            { name: "watermelon", birth: "1985-12-01" },
+        ];
+
+        const array2 = array1.map(item => (
+            {
+                name: item.name,
+                birth: item.birth,
+                age: Number(yyyy) - Number(item.birth.slice(0, 4))
+            }
+        ));
+
+        console.log(array2);
+        // expected output: array2[
+        //     { name: "apple", birth: "2000-01-01", age: 19 },
+        //     { name: "banana", birth: "1990-10-01", age: 29 },
+        //     { name: "watermelon", birth: "1985-12-01", age: 33 },
+        // ]
+
+
+        // 2.1
+        const array1 = [1, 2, 30, 400];
+        const array2 = array1.filter(item => item > 10); // filter เลขที่มากกว่า 10
+
+        console.log(array2);
+
+        // 2.2
+        const array1 = [1, 2, 3, 4];
+        const array2 = array1.filter(item => item % 2 !== 0); // filter เลขคี่
+
+        console.log(array2);
+
+        // 2.3
+        const array1 = [1, "1", 2, {}];
+        const array2 = array1.filter(item => typeof (item) === "number"); // filter Number
+
+        console.log(array2);
+
+        // 2.4
+        const array1 = ["apple", "banana", "orange", "pineapple", "watermeon"];
+        const array2 = array1.filter(item => item.length > 6); // filter ตัวอักษร > 6
+
+        console.log(array2);
+
+        // 2.5
+        const array1 = [
+            { name: "apple", age: 14 },
+            { name: "banana", age: 18 },
+            { name: "watermelon", age: 32 },
+            { name: "pineapple", age: 16 },
+            { name: "peach", age: 24 },
+        ];
+
+        const array2 = array1.filter(item => item.age < 18); // filter age < 18
+
+        console.log(array2);
+
+        // 2.6
+        const array1 = [
+            { name: "apple", age: 14 },
+            { name: "banana", age: 18 },
+            { name: "watermelon", age: 32 },
+            { name: "pineapple", age: 16 },
+            { name: "peach", age: 24 },
+        ];
+
+        const array2 = array1.filter(item => item.age !== 32); // filter ไม่เอาคนที่อายุ 32
+
+        console.log(array2);
+
+        // 2.7
+        const array1 = [1, -3, 2, 8, -4, 5];
+        const array2 = array1.filter(item => item >= 0); // filter เลขบวก
+
+        console.log(array2);
+
+        // 2.8
+        const array1 = [1, 3, 4, 5, 6, 7, 8];
+        const array2 = array1.filter(item => item % 3 === 0); // filter เลขหาร 3 ลงตัว
+
+        console.log(array2);
+
+        // 2.9
+        const array1 = ["peach", 1, -3, "2", {}, []];
+        const array2 = array1.filter(item => typeof (item) == "string"); // filter string
+
+        console.log(array2);
+
+        // 2.10
+        const array1 = ["APPLE", "appLE", "PEACH", "PEach"];
+        const array2 = array1.filter(item => item === item.toUpperCase()); // filter คำที่เป็นอักษรใหญ่ทุกตัว
+
+        console.log(array2);
+
+
+        // 2.11
+        const array1 = [
+            { name: "apple", birth: "2001-01-01" },
+            { name: "banana", birth: "1990-10-10" },
+            { name: "watermelon", birth: "1985-12-30" },
+            { name: "peach", birth: "2002-10-13" },
+        ];
+        const array2 = array1.filter(item => item.birth.slice(5, 7) == 10); // filter คนเกิดเดือน 10
+
+        console.log(array2);
+
+        // 2.12
+        const array1 = [
+            { name: "apple", birth: "2001-01-01" },
+            { name: "banana", birth: "1990-10-10" },
+            { name: "watermelon", birth: "1985-12-30" },
+            { name: "peach", birth: "2002-10-13" },
+        ];
+        const array2 = array1.filter(item => Number(item.birth.slice(0, 4)) < 2000); // filter คนเกิดก่อนปี 2000
+
+        console.log(array2);
+
+
+        //Map and Set - Ex01
+        function unique(arr) {
+            let arr_set = new Set(arr);
+            return arr_set;
+        }
+
+        let values = ["Hare", "Krishna", "Hare", "Krishna", "Krishna", "Krishna", "Hare", "Hare", ":-O"];
+
+        alert(unique(values)); // Hare, Krishna, :-O
+
+
+        //Map and Set - Ex02
+        function aclean(array) {
+            let organized = {};
+            for (let i = 0; i < array.length; i++) {
+                let word = array[i].split('').sort().join('');
+                if (!organized.hasOwnProperty(word)) {
+                    organized[word] = [];
+                }
+                organized[word].push(array[i]);
+            }
+            return organized;
+        }
+
+        // nap - pan
+        // ear - are - era
+        // cheaters - hectares - teachers
+
+        let arr = ["nap", "teachers", "cheaters", "PAN", "ear", "era", "hectares"];
+
+        alert(aclean(arr)); // "nap,teachers,ear" or "PAN,cheaters,era"
+
+
+        //Map and Set - Ex03
+        let map = new Map();
+
+        map.set("name", "John");
+
+        let keys = map.keys();
+
+        keys = Array.from(map);
+
+        // Error: keys.push is not a function
+        keys.push("more");
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function isPrime(num) {
+            for (let i = 2; i < num; i++)
+                if (num % i === 0) return false;
+            return num > 1;
+        }
+
+        function squareRoot(number) {
+            let sqrt = "";
+            let n = 0;
+
+            // validation for negative number
+            if (number < 0) return "Error";
+            if (prime_numbers.indexOf(number) >= 0) {
+                return sqrt = `root ${number}`;
+            } else {
+                n = Math.sqrt(number);
+                // check if n is an integer
+                if (Number(n) === n && n % 1 === 0) {
+                    return sqrt = n;
+                } else {
+                    for (prime of prime_numbers) {
+                        n = number / prime;
+                        if (prime_numbers.indexOf(n) >= 0) {
+                            return sqrt = `${prime} root ${n}`;
+                        } else {
+                            n = Math.sqrt(n);
+                            if (Number(n) === n && n % 1 === 0) {
+                                return sqrt = `${n} root ${prime}`;
+                                break;
+                            }
+                        }
+
+                    }
+                }
+            }
+        }
+
+        //Initialize prime number for dividing
+        let prime_numbers = [];
+
+        for (let i = 2; i <= 100; i++) {
+            if (isPrime(i)) prime_numbers.push(+i);
+        }
+
+        console.log(squareRoot(50));
+        console.log(squareRoot(17));
+        console.log(squareRoot(25));
+        console.log(squareRoot(77));
+        console.log(squareRoot(121));
+        console.log(squareRoot(12));
+
+    </script>
+</body>
+
+</html>

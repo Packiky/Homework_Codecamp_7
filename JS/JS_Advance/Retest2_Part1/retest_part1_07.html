@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        const number1 = +prompt("Enter a first number: ");
+        const number2 = +prompt("Enter a second number: ");
+        const number3 = +prompt("Enter a third number: ");
+        
+        let gcd;
+
+        for (let i = 1; i <= number1 && i <= number2 && i <= number3; i++) {
+            // check if is factor of all numbers
+            if (number1 % i == 0 && number2 % i == 0 && number3 % i == 0) {
+                gcd = i;
+            }
+        }
+
+        console.log(`GCD of ${number1} and ${number2} and ${number3} is ${gcd}.`);
+
+        // Input: [6, 8, 16]
+        // Output: 2
+        // Input: [12, 18, 24]
+        // Output: 6
+
+    </script>
+</body>
+
+</html>

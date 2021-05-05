@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let numbers = [];
+        let sum = 0;
+        let value = prompt("Enter Value:");
+
+        while (value != "stop") {
+            numbers.push(+value);
+            value = prompt("Enter Value:");
+        }
+
+        console.log("Original Numbers: " + numbers);
+        console.log("Reverse Numbers: " + numbers.reverse());
+
+
+        // -------------------
+        //     INPUT
+        //     - 35
+        // OUTPUT
+        //     - 53
+        // -------------------------
+        //     INPUT
+        // 542763
+        // OUPUT
+        // 367245
+        // -------------------------
+        //     INPUT
+        // 520
+        // OUPUT
+        // 25
+        // -------------------------
+
+    </script>
+</body>
+
+</html>
